@@ -1,0 +1,2 @@
+import { NextResponse } from 'next/server';
+export async function POST(req:Request){const form=await req.formData();const required=['name','company','email','phone','requirement'];if(required.some(k=>!String(form.get(k)||'').trim()))return NextResponse.json({error:'Missing required fields'},{status:400});const email=String(form.get('email'));if(!/^\S+@\S+\.\S+$/.test(email))return NextResponse.json({error:'Invalid email'},{status:400});/* Connect a CRM/email provider here; never expose provider credentials to the client. */return NextResponse.json({ok:true},{status:201})}
