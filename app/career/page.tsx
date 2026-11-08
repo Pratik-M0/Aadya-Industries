@@ -147,10 +147,10 @@ export default function Careers() {
 
           <div className="mt-9 flex flex-wrap gap-4">
             <Link
-              href="/contact"
+              href="#open-role"
               className="inline-flex items-center gap-2 rounded-lg bg-orange px-6 py-3.5 text-sm font-extrabold text-white transition hover:bg-orange/90"
             >
-              Apply Now <ArrowRight size={18} />
+              View Current Opening <ArrowRight size={18} />
             </Link>
 
             <a
@@ -210,8 +210,8 @@ export default function Careers() {
       {/* CAREER OPPORTUNITIES */}
       <section id="opportunities" className="section bg-mist">
         <div className="container">
-          <article className="mb-10 overflow-hidden rounded-2xl border border-orange/30 bg-white shadow-sm">
-            <div className="grid lg:grid-cols-[1fr_auto]">
+          <article id="open-role" className="mb-10 overflow-hidden rounded-2xl border border-orange/30 bg-white shadow-sm">
+            <div className="grid lg:grid-cols-[minmax(0,1fr)_280px]">
               <div className="p-7 md:p-9">
                 <div className="flex flex-wrap items-center gap-3">
                   <p className="text-xs font-extrabold uppercase tracking-[.16em] text-orange">
@@ -252,17 +252,26 @@ export default function Careers() {
                 </div>
               </div>
 
-              <div className="flex items-center bg-navy p-7 text-white lg:max-w-xs lg:p-9">
+              <div className="flex flex-col justify-center gap-5 bg-navy p-7 text-white lg:p-8">
+                <div className="grid size-12 place-items-center rounded-xl bg-white/10 text-orange">
+                  <BriefcaseBusiness size={24} />
+                </div>
                 <div>
-                  <p className="text-sm leading-6 text-slate-300">
-                    Use the application form below to share your details and resume.
+                  <p className="text-xs font-extrabold uppercase tracking-[.16em] text-orange">
+                    Your next step
+                  </p>
+                  <h3 className="mt-2 text-lg font-extrabold">
+                    Interested in the role?
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-300">
+                    Complete the application form below and attach your resume.
                   </p>
                 </div>
               </div>
             </div>
           </article>
 
-          <div id="application-form" className="scroll-mt-24 rounded-2xl bg-white p-6 shadow-sm md:p-8">
+          <div id="application-form" className="scroll-mt-24 mt-14">
             <SectionTitle
               eyebrow="APPLY NOW"
               title="Apply for Marketing Executive."
@@ -273,13 +282,14 @@ export default function Careers() {
             </div>
           </div>
 
-          <SectionTitle
-            eyebrow="CAREER AREAS"
-            title="Explore other career areas."
-            copy="The roles below show areas where we welcome interest. The Marketing Executive role above is our current opening."
-          />
+          <div className="mt-16 border-t border-slate-200 pt-12">
+            <SectionTitle
+              eyebrow="CAREER AREAS"
+              title="Explore other career areas."
+              copy="The roles below show areas where we welcome interest. The Marketing Executive role above is our current opening."
+            />
 
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {opportunities.map((job) => {
               const Icon = job.icon;
 
@@ -340,6 +350,7 @@ export default function Careers() {
                 </article>
               );
             })}
+            </div>
           </div>
         </div>
       </section>
