@@ -1,6 +1,7 @@
 declare module 'lucide-react' {
   import type { ComponentType, SVGProps } from 'react';
   export const ArrowRight: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
+  export const BriefcaseBusiness: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
   export const Check: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
   export const CheckCircle2: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
   export const ChevronDown: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
@@ -8,7 +9,11 @@ declare module 'lucide-react' {
   export const DraftingCompass: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
   export const Factory: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
   export const FlaskConical: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
+  export const GraduationCap: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
   export const Layers3: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
+  export const Lightbulb: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
   export const Menu: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
   export const ShieldCheck: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
+  export const Users: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
+  export const Wrench: ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
 }
